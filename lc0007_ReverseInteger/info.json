@@ -1,5 +1,6 @@
 {
     "index": 7,
     "difficulty": "easy",
-    "category": ["misc"]
+    "category": ["misc"],
+    "url_title": "reverse-integer"
 }

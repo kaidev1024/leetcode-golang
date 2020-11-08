@@ -1,5 +1,6 @@
 {
     "index": 9,
     "difficulty": "easy",
-    "category": ["palindrome"]
+    "category": ["palindrome"],
+    "url_title": "palindrome-number"
 }
