@@ -1,0 +1,6 @@
+{
+    "index": 20,
+    "difficulty": "easy",
+    "category": ["validation", "stack", "parenthesis"],
+    "url_title": "valid-parentheses"
+}
