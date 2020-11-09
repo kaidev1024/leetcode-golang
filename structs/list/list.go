@@ -21,7 +21,7 @@ func (ln *ListNode) Append(next *ListNode) {
 	ln.Next = next
 }
 
-func (ln *ListNode) Print() {
+func (ln *ListNode) String() string {
 	if ln == nil {
 		fmt.Println("empty list")
 	}
@@ -32,8 +32,7 @@ func (ln *ListNode) Print() {
 		ln = ln.Next
 	}
 	sb.WriteString(strconv.Itoa(ln.Val))
-	sb.WriteString("\n")
-	fmt.Println(sb.String())
+	return sb.String()
 }
 
 func NewList(arr []int) *ListNode {
