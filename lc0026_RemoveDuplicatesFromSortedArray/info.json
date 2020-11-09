@@ -1,0 +1,6 @@
+{
+    "index": 26,
+    "difficulty": "easy",
+    "category": ["array", "sorted", "duplicate"],
+    "url_title": "remove-duplicates-from-sorted-array"
+}
