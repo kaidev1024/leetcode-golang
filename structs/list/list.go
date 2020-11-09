@@ -1,5 +1,11 @@
 package structs
 
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -13,6 +19,21 @@ func NewListNode(v int) *ListNode {
 
 func (ln *ListNode) Append(next *ListNode) {
 	ln.Next = next
+}
+
+func (ln *ListNode) Print() {
+	if ln == nil {
+		fmt.Println("empty list")
+	}
+	var sb strings.Builder
+	for ln.Next != nil {
+		sb.WriteString(strconv.Itoa(ln.Val))
+		sb.WriteString("->")
+		ln = ln.Next
+	}
+	sb.WriteString(strconv.Itoa(ln.Val))
+	sb.WriteString("\n")
+	fmt.Println(sb.String())
 }
 
 func NewList(arr []int) *ListNode {
