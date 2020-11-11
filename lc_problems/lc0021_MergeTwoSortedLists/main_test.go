@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	list "github.com/kaidev1024/leetcode-golang/structs/list"
+	"github.com/kaidev1024/leetcode-golang/structs/list"
 )
 
 func TestMergeTwoLists(t *testing.T) {
