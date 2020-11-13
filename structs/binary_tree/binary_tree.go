@@ -1,10 +1,10 @@
-package binaryTree
+package tree
 
-type BinaryTreeNode struct {
+type TreeNode struct {
 	Val         int
-	Left, Right *BinaryTreeNode
+	Left, Right *TreeNode
 }
 
-func NewBinaryTreeNode(val int) *BinaryTreeNode {
+func NewTreeNode(val int) *TreeNode {
 	return &{Val: val}
 }
