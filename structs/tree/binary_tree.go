@@ -6,5 +6,5 @@ type TreeNode struct {
 }
 
 func NewTreeNode(val int) *TreeNode {
-	return &{Val: val}
+	return &TreeNode{Val: val}
 }
