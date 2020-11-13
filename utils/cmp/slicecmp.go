@@ -1,4 +1,4 @@
-package cmp
+package slicecmp
 
 func CmpIntSlice(arr1, arr2 []int) int8 {
 	l1 := len(arr1)
