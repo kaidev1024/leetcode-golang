@@ -1,10 +1,15 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 var a = "11"
 var b = "1"
 var r = "100"
+
+var errorType = reflect.TypeOf((*error)(nil)).Elem()
 
 func TestAddBinary(t *testing.T) {
 	if addBinary(a, b) != r {
