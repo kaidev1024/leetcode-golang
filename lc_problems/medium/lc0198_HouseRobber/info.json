@@ -1,5 +1,5 @@
 {
-    "index": 166,
-    "category": ["string", "int", "divide"],
-    "url_title": "fraction-to-recurring-decimal"
+    "index": 198,
+    "category": ["array", "dp", "max", "robber"],
+    "url_title": "house-robber"
 }
