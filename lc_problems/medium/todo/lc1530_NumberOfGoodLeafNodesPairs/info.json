@@ -1,5 +1,5 @@
 {
-    "index": 1536,
-    "category": ["matrix", "binary", "min", "diagonal"],
+    "index": 1530,
+    "category": ["binary tree", "distance", "leaf", "count"],
     "url_title": "minimum-swaps-to-arrange-a-binary-grid"
 }
