@@ -1,30 +1,31 @@
 func numberOfSubstrings(s string) int {
 	ca, cb, cc := 0, 0, 0
-	i, j := 0, 0
 	result := 0
 	n := len(s)
 
-	for j < n {
-		if s[j] == 'a' {
+	for start, end := 0, 0; end < n; end++ {
+		switch s[end] {
+		case 'a':
 			ca++
-		} else if s[j] == 'b' {
+		case 'b':
 			cb++
-		} else {
+		case 'c':
 			cc++
 		}
 
 		for ca > 0 && cb > 0 && cc > 0 {
-			if s[i] == 'a' {
+			switch s[start] {
+			case 'a':
 				ca--
-			} else if s[i] == 'b' {
+			case 'b':
 				cb--
-			} else {
+			case 'c':
 				cc--
 			}
-			i++
+			start++
 		}
-		result += i
-		j++
+
+		result += start
 	}
 	return result
 }

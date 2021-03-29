@@ -1,36 +1,32 @@
 type Cashier struct {
-	target   int
-	count    int
+	bills    int
+	n        int
 	discount int
-	prices   map[int]int
+	m        map[int]int
 }
 
 func Constructor(n int, discount int, products []int, prices []int) Cashier {
 	m := make(map[int]int)
-	for i, product := range products {
-		m[product] = prices[i]
+	for i, p := range products {
+		m[p] = prices[i]
 	}
-	return Cashier{
-		target:   n,
-		count:    0,
-		discount: discount,
-		prices:   m,
-	}
+	return Cashier{0, n, discount, m}
 }
 
-func (this *Cashier) GetBill(product []int, amount []int) float64 {
-	this.count++
-	total := 0
+func (cashier *Cashier) GetBill(product []int, amount []int) float64 {
+	cashier.bills++
+
+	var sum float64 = 0
 	for i, p := range product {
-		total += this.prices[p] * amount[i]
+		sum += float64(cashier.m[p] * amount[i])
 	}
 
-	result := float64(total)
-	if this.count == this.target {
-		this.count = 0
-		result = float64(total) * (1 - float64(this.discount)/100)
+	if cashier.bills == cashier.n {
+		cashier.bills = 0
+		return sum - (float64(cashier.discount)*sum)/100
 	}
-	return result
+
+	return sum
 }
 
 /**
