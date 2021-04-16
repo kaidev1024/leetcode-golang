@@ -1,0 +1,28 @@
+func minDistance(word1 string, word2 string) int {
+	n1 := len(word1)
+	n2 := len(word2)
+
+	dp := make([][]int, n1+1)
+	for i := 0; i <= n1; i++ {
+		dp[i] = make([]int, n2+1)
+	}
+	for i := 0; i < n1; i++ {
+		for j := 0; j < n2; j++ {
+			if word1[i] == word2[j] {
+				dp[i+1][j+1] = 1 + dp[i][j]
+			} else {
+				dp[i+1][j+1] = max(dp[i][j+1], dp[i+1][j])
+			}
+
+		}
+	}
+
+	return n1 + n2 - 2*dp[n1][n2]
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
